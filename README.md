@@ -11,7 +11,8 @@ Official PyTorch implementation of ESREAL. For details, see the paper **[ESREAL:
 Authors: Minchan Kim, Minyeong Kim, Junik Bae, Suhwan Choi, Sungkyung Kim, Buru Chang
 
 ## 🔥 News
-- **`2024/10/10`**: Code is available now.
+- **`Oct 2024`**: Code is available now.
+- **`Jul 2024`**: ESREAL got accepted to ECCV 2024.
 
 ## 🛠️ Installation
 
@@ -51,7 +52,7 @@ sh scripts/infer.sh
 
 ### Commit Message Convention
 
-For more detail, refer to https://www.conventionalcommits.org/en/v1.0.0/
+For more detail, refer to https://www.conventionalcommits.org/en/v1.0.0/.
 
 - Types: Describes the category of the change.
     - feat: A new feature for a specific project.
@@ -79,3 +80,7 @@ If you find our work helpful for your research, please consider citing the follo
       url={https://arxiv.org/abs/2403.16167}, 
 }
 ```
+
+<div align="center">
+  <img src="./assets/cite.gif" width="20%">
+</div>
