@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/logo.png" width="30%">
+  <img src="./assets/logo.png" width="20%">
 </div>
 
 # 👻 ESREAL
@@ -76,9 +76,6 @@ If you find our work helpful for your research, please consider citing the follo
       title={Exploiting Semantic Reconstruction to Mitigate Hallucinations in Vision-Language Models}, 
       author={Minchan Kim and Minyeong Kim and Junik Bae and Suhwan Choi and Sungkyung Kim and Buru Chang},
       year={2024},
-      eprint={2403.16167},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
       url={https://arxiv.org/abs/2403.16167}, 
 }
 ```
