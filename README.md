@@ -8,7 +8,7 @@
 
 Official PyTorch implementation of ESREAL. For details, see the paper **[ESREAL: Exploiting Semantic Reconstruction to Mitigate Hallucinations in Vision-Language Models](https://arxiv.org/abs/2403.16167)**.
 
-Authors: Minchan Kim, Minyeong Kim, Junik Bae, Suhwan Choi, Sungkyung Kim, Buru Chang
+Authors: **[Minchan Kim*](https://shovelingpig.github.io/)**, **[Minyeong Kim*](https://kmy17518.github.io)**, **Junik Bae***, Suhwan Choi, Sungkyung Kim, Buru Chang (*: equal contribution)
 
 ## 🔥 News
 - **`Oct 2024`**: Code is available now.
