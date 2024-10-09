@@ -1,0 +1,14 @@
+torch
+torchvision
+transformers
+diffusers
+accelerate
+datasets
+
+loguru
+orjson
+tqdm
+openai
+
+open_clip_torch
+albumentations

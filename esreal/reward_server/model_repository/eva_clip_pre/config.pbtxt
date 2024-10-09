@@ -1,0 +1,32 @@
+name: "eva_clip_pre"
+backend: "python"
+max_batch_size: 16
+input [
+  {
+    name: "IMAGE"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+  }
+]
+output [
+  {
+    name: "CROP_IMAGE"
+    data_type: TYPE_UINT8
+    dims: [ 224, 224, 3 ]
+  }
+]
+output [
+  {
+    name: "TENSOR_IMAGE"
+    data_type: TYPE_FP32
+    dims: [ 3, 224, 224 ]
+  }
+]
+dynamic_batching {}
+
+instance_group [
+  {
+    count: 8
+    kind: KIND_CPU
+  }
+]

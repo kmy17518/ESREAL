@@ -1,0 +1,11 @@
+[submodule "libs/Hallucination"]
+	path = libs/Hallucination
+	url = https://github.com/LisaAnne/Hallucination.git
+
+[submodule "libs/FAITHSCORE"]
+	path = libs/FAITHSCORE
+	url = https://github.com/bcdnlp/FAITHSCORE.git
+
+[submodule "libs/pope"]
+	path = libs/pope
+	url = https://github.com/RUCAIBox/POPE.git

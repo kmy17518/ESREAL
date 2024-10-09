@@ -1,0 +1,56 @@
+name: "eva_clip"
+platform: "ensemble"
+max_batch_size: 16
+input [
+  {
+    name: "IMAGE"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+  }
+]
+output [
+  {
+    name: "CROP_IMAGE"
+    data_type: TYPE_UINT8
+    dims: [ 224, 224, 3 ]
+  }
+]
+output [
+  {
+    name: "IMAGE_EMBEDS"
+    data_type: TYPE_FP32
+    dims: [ 257, 1408 ]
+  }
+]
+ensemble_scheduling {
+  step [
+    {
+      model_name: "eva_clip_pre"
+      model_version: -1
+      input_map {
+        key: "IMAGE"
+        value: "IMAGE"
+      }
+      output_map {
+        key: "CROP_IMAGE"
+        value: "CROP_IMAGE"
+      }
+      output_map {
+        key: "TENSOR_IMAGE"
+        value: "_TENSOR_IMAGE"
+      }
+    },
+    {
+      model_name: "eva_clip_infer"
+      model_version: -1
+      input_map {
+        key: "TENSOR_IMAGE"
+        value: "_TENSOR_IMAGE"
+      }
+      output_map {
+        key: "IMAGE_EMBEDS"
+        value: "IMAGE_EMBEDS"
+      }
+    }
+  ]
+}

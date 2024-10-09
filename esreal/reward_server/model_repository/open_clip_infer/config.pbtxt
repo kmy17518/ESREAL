@@ -1,0 +1,27 @@
+name: "open_clip_infer"
+backend: "python"
+max_batch_size: 256
+input [
+  {
+    name: "INPUT"
+    data_type: TYPE_UINT8
+    dims: [ -1 ]
+    allow_ragged_batch: true
+  }
+]
+output [
+  {
+    name: "OUTPUT"
+    data_type: TYPE_UINT8
+    dims: [ -1 ]
+  }
+]
+dynamic_batching {}
+
+instance_group [
+  {
+    count: 1
+    kind: KIND_GPU
+    gpus: [ 0 ]
+  }
+]

@@ -1,0 +1,25 @@
+name: "eva_clip"
+backend: "python"
+max_batch_size: 256
+input [
+  {
+    name: "TENSOR_IMAGE"
+    data_type: TYPE_FP32
+    dims: [ 3, 224, 224 ]
+  }
+]
+output [
+  {
+    name: "IMAGE_EMBEDS"
+    data_type: TYPE_FP32
+    dims: [ 257, 1408 ]
+  }
+]
+dynamic_batching {}
+
+instance_group [
+  {
+    count: 1
+    kind: KIND_CPU
+  }
+]

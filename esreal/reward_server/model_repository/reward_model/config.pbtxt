@@ -1,0 +1,65 @@
+name: "reward_model"
+backend: "python"
+max_batch_size: 8
+input [
+  {
+    name: "IMAGE"
+    data_type: TYPE_UINT8
+    dims: [ 224, 224, 3 ]
+  },
+  {
+    name: "PROMPT"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+  },
+  {
+    name: "TOKENIZED_PROMPT"
+    data_type: TYPE_STRING
+    dims: [ -1 ]
+  }
+]
+
+output [
+  {
+    name: "MEAN_REC_REWARD"
+    data_type: TYPE_FP32
+    dims: [ -1 ]
+  }
+]
+output [
+  {
+    name: "MEAN_OBJ_PENALTY"
+    data_type: TYPE_FP32
+    dims: [ -1 ]
+  }
+]
+output [
+  {
+    name: "MEAN_ATT_PENALTY"
+    data_type: TYPE_FP32
+    dims: [ -1 ]
+  }
+]
+output [
+  {
+    name: "MEAN_REL_PENALTY"
+    data_type: TYPE_FP32
+    dims: [ -1 ]
+  }
+]
+output [
+  {
+    name: "MEAN_POS_PENALTY"
+    data_type: TYPE_FP32
+    dims: [ -1 ]
+  }
+]
+
+
+instance_group [
+  {
+    count: 1
+    kind: KIND_GPU
+    gpus: [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+  }
+]
